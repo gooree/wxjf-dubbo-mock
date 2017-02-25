@@ -56,11 +56,8 @@ public class MockFilter implements Filter {
 					stream = resource.getInputStream();
 					int bytes = 0;
 					try {
-						while (bytes != -1) {
-							bytes = stream.read(buffer);
-							if (bytes > 0) {
-								baos.write(buffer, 0, bytes);
-							}
+						while ((bytes = stream.read(buffer)) != -1) {
+							baos.write(buffer, 0, bytes);
 						}
 					} finally {
 						if (stream != null) {
