@@ -19,7 +19,6 @@ import com.alibaba.dubbo.rpc.Result;
 import com.alibaba.dubbo.rpc.RpcException;
 import com.alibaba.dubbo.rpc.RpcResult;
 
-@Activate(group = Constants.PROVIDER, order = 1)
 public class MockFilter implements Filter {
 
 	private static final Logger logger = LoggerFactory.getLogger(MockFilter.class);
@@ -76,7 +75,8 @@ public class MockFilter implements Filter {
 	
 					result.setValue(value);
 				} else {
-					throw new FileNotFoundException(resource.getFilename());
+					logger.debug("mock file {} cannot be found, null value will be returned.", resource.getFilename());
+					result.setValue(null);
 				}
 			}
 		} catch (Exception ex) {
