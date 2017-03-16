@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.wxjfkg</groupId>
 	<artifactId>wxjf-dubbo-mock</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0.RELEASE</version>
 	
 	<developers>
 		<developer>
@@ -17,14 +17,6 @@
 		<slf4j-log4j12.version>1.7.7</slf4j-log4j12.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
-	<distributionManagement>
-		<snapshotRepository>
-			<id>nexus-snapshots</id>
-			<name>wxjr Nexus Snapshot Repository</name>
-			<url>http://192.168.7.3:8081/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
 
 	<dependencies>
 		<dependency>
